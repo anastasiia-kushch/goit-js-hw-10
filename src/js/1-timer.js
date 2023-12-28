@@ -13,4 +13,12 @@ const options = {
   },
 };
 
+let userSelectedDate;
+
 flatpickr(inputEl, options);
+
+// Дата должна быть в будущем, иначе window.alert('Plese choose a date un the future') + неактивная кнопка старт
+
+onClose();
+
+userSelectedDate = selectedDates[0];
