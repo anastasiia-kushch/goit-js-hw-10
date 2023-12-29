@@ -2,6 +2,8 @@ import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
 
 const inputEl = document.querySelector('#datetime-picker');
+const buttonEl = document.querySelector('[data-start]');
+buttonEl.disabled = true;
 
 const options = {
   enableTime: true,
@@ -17,8 +19,18 @@ let userSelectedDate;
 
 flatpickr(inputEl, options);
 
-// Дата должна быть в будущем, иначе window.alert('Plese choose a date un the future') + неактивная кнопка старт
+buttonEl.addEventListener('click', )
 
-onClose();
+onClose((selectedDates) => {
+  userSelectedDate = selectedDates[0];
+  
+  if(userSelectedDate !== new Date()) {
+    window.alert("Please choose a date in the future");
+    return;
+  } else {
+    buttonEl.disabled = true;
+  }
 
-userSelectedDate = selectedDates[0];
+});
+
+
