@@ -1,0 +1,13 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+fieldset {
+    width: fit-content;
+}
+
+button {
+    width: 194px;
+}
