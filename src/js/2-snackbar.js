@@ -15,6 +15,8 @@ formEl.addEventListener('submit', function (event) {
     console.error('Invalid delay value');
   }
 
+  event.currentTarget.reset();
+
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'fulfilled') {

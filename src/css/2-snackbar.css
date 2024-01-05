@@ -10,4 +10,5 @@ fieldset {
 
 button {
     width: 194px;
+    cursor: pointer;
 }
